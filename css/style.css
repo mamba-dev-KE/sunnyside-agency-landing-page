@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 10px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: none;
+}
+
+.header {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    margin: 2em 0 2em 2em;
+}
+
+.hero-message {
+    position: absolute;
+    top: 20%;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.hero-title,
+.brand-title,
+.btn {
+    font-family: 'Fraunces', sans-serif;
+}
+
+.brand-p {
+    font-family: 'Barlow', sans-serif;
+}
+
+.hero-title {
+    width: 70%;
+    margin: 0 auto;
+    font-weight: 900;
+    letter-spacing: .2em;
+    text-align: center;
+}
+
+.hero-arrow {
+    width: 3.5rem;
+    margin: 3.8em auto;
+}
+
+.brand {
+    background-color: hsl(26, 100%, 99%);
+    text-align: center;
+}
+
+.brand-info {
+    font-size: 1.8rem;
+    margin: 0 auto;
+}
+
+.brand-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: hsl(210, 31%, 20%);
+    padding-top: 5rem;
+}
+
+.brand-p {
+    color: hsl(240, 4%, 53%);
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 2em auto;
+    width: 90%;
+}
+
+.btn {
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    padding-bottom: 3em;
+    font-weight: 900;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: hsl(210, 31%, 20%);
+}
+
+.yellow-accent {
+    box-shadow: 0px 12px 9px 0px rgba(250, 212, 0, 0.5);
+}
+
+.pink-accent {
+    box-shadow: 0px 12px 9px 0px hsl(7, 99%, 70%);
+}
+
+.row {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
