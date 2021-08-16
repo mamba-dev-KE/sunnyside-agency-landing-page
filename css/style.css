@@ -73,10 +73,6 @@ ul:hover {
 
 /* HERO SECTION STYLES */
 
-.hero {
-	/* position: relative; */
-}
-
 .hero__wrapper {
 	position: absolute;
 	text-transform: uppercase;
@@ -285,6 +281,10 @@ ul:hover {
 	color: #595959;
 }
 
+.attribution a:hover {
+	color: #190eb8;
+}
+
 .attribution__designer,
 .attribution__programmer {
 	font-size: 1.2rem;
@@ -293,7 +293,7 @@ ul:hover {
 
 @media only screen and (min-width: 700px) {
 	.container {
-		max-width: 1400px;
+		max-width: 1440px;
 		margin: 0 auto;
 	}
 	.brands__transform__row,
@@ -304,6 +304,10 @@ ul:hover {
 	}
 	.brands__transform__row {
 		flex-direction: row-reverse;
+	}
+
+	.testimonials {
+		padding: 6em 0 14em 0;
 	}
 
 	.testimonials__row {
@@ -321,6 +325,33 @@ ul:hover {
 	.brands__image,
 	.brands__info {
 		flex-basis: 50%;
+	}
+
+	.brands__info,
+	.brands__para,
+	.brands__title {
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
+
+	.brands__para {
+		max-width: 100%;
+		margin-bottom: 2em;
+	}
+
+	.brands__info {
+		display: flex;
+		align-items: center;
+	}
+
+	.brands__wrapper {
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	.brands__title {
+		margin-bottom: 1em;
 	}
 
 	.design__component {
