@@ -16,39 +16,40 @@
 
 <body>
   <header class="header">
-    <picture>
-      <source media="(min-width: 757px)" srcset="./images/desktop/image-header.jpg">
-      <source media="(min-width: 756px)" srcset="./images/mobile/image-header.jpg">
-      <img src="./images/mobile/image-header.jpg" alt="text">
-    </picture>
-
-    <img class="logo" src="./images/logo.svg" alt="sunnyside">
-
-    <div class="hero-message">
-      <h1 class="hero-title">We are creatives</h1>
-      <img class="hero-arrow" src="./images/icon-arrow-down.svg" alt="">
-    </div>
-    </div>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-items"><a href="">About</a></li>
-        <li class="nav-items"><a href="">Services</a></li>
-        <li class="nav-items"><a href="">Projects</a></li>
-        <li class="nav-items"><a href="">Contact</a></li>
+    <img class="header__logo" src="./images/logo.svg" alt="sunnyside">
+    <nav class="header__nav">
+      <ul class="header__nav__list">
+        <li class="header__nav__items"><a href="">About</a></li>
+        <li class="header__nav__items"><a href="">Services</a></li>
+        <li cclass="header__nav__items"><a href="">Projects</a></li>
+        <li class="header__nav__items"><a href="">Contact</a></li>
       </ul>
     </nav>
+    <picture>
+      <source media="(min-width: 757px)" srcset="./images/desktop/image-header.jpg" alt="orange">
+      <source media="(min-width: 756px)" srcset="./images/mobile/image-header.jpg" alt="orange">
+      <img src="./images/mobile/image-header.jpg" alt="orange">
+    </picture>
   </header>
+  <main class="content">
 
-  <main>
-    <section class="brand">
-      <div class="row">
-        <div class="brand-info column">
-          <h2 class="brand-title">Transform your brand</h2>
-          <p class="brand-p">We are a full-service creative agency specializing in helping brands grow fast. Engage your
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <h1 class="hero__title">We are creatives</h1>
+      <img class="hero__arrow" src="./images/icon-arrow-down.svg" alt="">
+    </section>
+
+    <!-- BRANDS SECTION -->
+    <section class="brands">
+      <div class="container row">
+        <div class="brands__info column">
+          <h2 class="brands__title">Transform your brand</h2>
+          <p class="brands__para">We are a full-service creative agency specializing in helping brands grow fast. Engage
+            your
             clients through compelling visuals that do most of the marketing for you.</p>
           <button class="btn"><a class="btn-link yellow-accent" href="#">Learn More</a></button>
         </div>
-        <div class="image-column">
+        <div class="brands__image column">
           <picture>
             <source media="(min-width: 757px)" srcset="./images/mobile/image-transform.jpg">
             <source media="(min-width: 756px )" srcset="./images/desktop/image-transform.jpg">
@@ -57,14 +58,15 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="brand-info column">
-          <h2 class="brand-title">Stand out to the right audience</h2>
-          <p class="brand-p">Using a collaborative formula of designers, researchers, photographers, videographers, and
+      <div class="container row">
+        <div class="brands__info column">
+          <h2 class="brands__title">Standout to the right audience</h2>
+          <p class="brands__para">Using a collaborative formula of designers, researchers, photographers, videographers,
+            and
             copywriters, we’ll build and extend your brand in digital places.</p>
           <button class="btn"><a class="btn-link pink-accent" href="#">Learn More</a></button>
         </div>
-        <div class="image-column">
+        <div class="brands__image column">
           <picture>
             <source media="(max-width: 757px)" srcset="./images/mobile/image-stand-out.jpg">
             <source media="(min-width: 756px )" srcset="./images/desktop/image-stand-out.jpg">
@@ -72,9 +74,25 @@
           </picture>
         </div>
       </div>
+    </section>
 
+    <!-- GRAPHIC DESIGN SECTION -->
+    <section class="design">
+      <div class=" row">
+        <div class="design__component">
+          <div class="design__image">
+            <picture>
+              <source media="(min-width: 757px)" srcset="./images/mobile/image-graphic-design.jpg">
+              <source media="(min-width: 756px )" srcset="./images/desktop/image-graphic-design.jpg">
+              <img src="./images/desktop/image-graphic-design.jpg" alt="text">
+            </picture>
+
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
