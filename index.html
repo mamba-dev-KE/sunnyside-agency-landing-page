@@ -17,6 +17,10 @@
 <body>
   <header class="header">
     <img class="header__logo" src="./images/logo.svg" alt="sunnyside">
+
+    <!-- <div class="header__menu">
+        <img src="./images/icon-hamburger.svg" alt="">
+      </div> -->
     <nav class="header__nav">
       <ul class="header__nav__list">
         <li class="header__nav__items"><a href="">About</a></li>
@@ -25,10 +29,11 @@
         <li class="header__nav__items"><a href="">Contact</a></li>
       </ul>
     </nav>
+
     <picture>
-      <source media="(min-width: 757px)" srcset="./images/desktop/image-header.jpg" alt="orange">
-      <source media="(min-width: 756px)" srcset="./images/mobile/image-header.jpg" alt="orange">
-      <img src="./images/mobile/image-header.jpg" alt="orange">
+      <source media="(max-width: 757px)" srcset="./images/mobile/image-header.jpg">
+      <source media="(min-width: 756px)" srcset="./images/desktop/image-header.jpg">
+      <img src="./images/desktop/image-header.jpg" alt="">
     </picture>
   </header>
   <main class="content">
@@ -47,13 +52,13 @@
           <p class="brands__para">We are a full-service creative agency specializing in helping brands grow fast. Engage
             your
             clients through compelling visuals that do most of the marketing for you.</p>
-          <button class="btn"><a class="btn-link yellow-accent" href="#">Learn More</a></button>
+          <button class="brands__btn"><a class="brands__link brands__link--yellow" href="#">Learn More</a></button>
         </div>
         <div class="brands__image column">
           <picture>
-            <source media="(min-width: 757px)" srcset="./images/mobile/image-transform.jpg">
+            <source media="(max-width: 757px)" srcset="./images/mobile/image-transform.jpg">
             <source media="(min-width: 756px )" srcset="./images/desktop/image-transform.jpg">
-            <img src="./images/desktop/image-transform.jpg" alt="text">
+            <img src="./images/desktop/image-transform.jpg" alt="">
           </picture>
         </div>
       </div>
@@ -64,13 +69,14 @@
           <p class="brands__para">Using a collaborative formula of designers, researchers, photographers, videographers,
             and
             copywriters, we’ll build and extend your brand in digital places.</p>
-          <button class="btn"><a class="btn-link pink-accent" href="#">Learn More</a></button>
+          <button class="brands__btn"><a class="brands__link brands__link--redish" href="#">Learn
+              More</a></button>
         </div>
         <div class="brands__image column">
           <picture>
             <source media="(max-width: 757px)" srcset="./images/mobile/image-stand-out.jpg">
             <source media="(min-width: 756px )" srcset="./images/desktop/image-stand-out.jpg">
-            <img src="./images/desktop/image-stand-out.jpg" alt="text">
+            <img src="./images/desktop/image-stand-out.jpg" alt="">
           </picture>
         </div>
       </div>
@@ -78,25 +84,57 @@
 
     <!-- GRAPHIC DESIGN SECTION -->
     <section class="design">
-      <div class=" row">
+      <div class="container row">
         <div class="design__component">
           <div class="design__image">
             <picture>
-              <source media="(min-width: 757px)" srcset="./images/mobile/image-graphic-design.jpg">
+              <source media="(max-width: 757px)" srcset="./images/mobile/image-graphic-design.jpg">
               <source media="(min-width: 756px )" srcset="./images/desktop/image-graphic-design.jpg">
-              <img src="./images/desktop/image-graphic-design.jpg" alt="text">
+              <img src="./images/desktop/image-graphic-design.jpg" alt="">
             </picture>
-
+          </div>
+          <div class="design__info">
+            <h2 class="design__title">Graphic Design</h2>
+            <p class="design__para">Great design makes you memorable. We deliver artwork that underscores your brand
+              message and captures
+              potential clients’ attention.</p>
           </div>
         </div>
       </div>
+
+      <div class="design__component">
+        <div class="design__image">
+          <picture>
+            <source media="(max-width: 757px)" srcset="./images/mobile/image-photography.jpg">
+            <source media="(min-width: 756px )" srcset="./images/desktop/image-photography.jpg">
+            <img src="./images/desktop/image-photography.jpg" alt="">
+          </picture>
+        </div>
+        <div class="design__info">
+          <h2 class="design__title design__title--blue">Photography</h2>
+          <p class="design__para design__para--blue">Increase your credibility by getting the most stunning,
+            high-quality photos that
+            improve your business image.</p>
+        </div>
+      </div>
     </section>
+
+    <section class="testimonials">
+      <div class="container row">
+        <h2 class="testimonials_title">Client Testimonials</h2>
+        <div class="testimonials__card">
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
 </body>
 
 </html>

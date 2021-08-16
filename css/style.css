@@ -13,14 +13,36 @@
 img {
 	max-width: 100%;
 	display: block;
-	margin: 0;
-	padding: 0;
 }
 
 nav {
 	display: none;
 }
 
+a:link,
+a:visited {
+	color: hsl(210, 31%, 20%);
+}
+/* SHARED STYLES */
+.brands,
+.hero,
+.design {
+	text-align: center;
+}
+.hero__title,
+.brands__title,
+.design__title,
+.brands__btn {
+	font-family: "Fraunces", sans-serif;
+}
+
+.brands__para,
+.design__para {
+	font-family: "Barlow", sans-serif;
+	font-size: 1.8rem;
+}
+
+/* HEADER SECTION STYLES */
 .header {
 	position: relative;
 }
@@ -31,6 +53,7 @@ nav {
 	margin: 2em 0 2em 2em;
 }
 
+/* HERO SECTION STYLES */
 .hero {
 	position: absolute;
 	top: 20%;
@@ -40,22 +63,11 @@ nav {
 	line-height: 1.5;
 }
 
-.hero__title,
-.brands__title,
-.btn {
-	font-family: "Fraunces", sans-serif;
-}
-
-.brand-para {
-	font-family: "Barlow", sans-serif;
-}
-
 .hero__title {
 	width: 70%;
 	margin: 1em auto;
 	font-weight: 900;
 	letter-spacing: 0.2em;
-	text-align: center;
 }
 
 .hero__arrow {
@@ -63,14 +75,14 @@ nav {
 	margin: 3em auto;
 }
 
+/* BRANDS SECTION STYLES */
 .brands {
 	background-color: hsl(26, 100%, 99%);
-	text-align: center;
 }
 
 .brands__info {
-	font-size: 1.8rem;
 	margin: 0 auto;
+	padding-bottom: 3.5em;
 }
 
 .brands__title {
@@ -78,6 +90,8 @@ nav {
 	font-weight: 900;
 	color: hsl(210, 31%, 20%);
 	padding-top: 5rem;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .brands__para {
@@ -85,37 +99,62 @@ nav {
 	line-height: 1.5;
 	font-weight: 600;
 	margin: 2em auto;
-	width: 90%;
+	width: 83%;
 }
 
-.btn {
+.brands__btn {
 	text-transform: uppercase;
 	background: none;
 	border: none;
 	padding-bottom: 3em;
 	font-weight: 900;
+	font-size: 1.5rem;
 }
 
-.btn-link {
+.brands__link {
 	text-decoration: none;
 }
 
-a:link,
-a:visited {
-	color: hsl(210, 31%, 20%);
+.brands__link--yellow {
+	box-shadow: 0px 12px 9px 0px hsl(51, 100%, 49%);
 }
 
-.yellow-accent {
-	box-shadow: 0px 12px 9px 0px rgba(250, 212, 0, 0.5);
-}
-
-.pink-accent {
+.brands__link--redish {
 	box-shadow: 0px 12px 9px 0px hsl(7, 99%, 70%);
 }
 
 .row {
 	display: flex;
 	flex-direction: column-reverse;
+}
+/*GRAPHIC DESIGN SECTION*/
+.design__component {
+	position: relative;
+}
+
+.design__info {
+	position: absolute;
+	top: 65%;
+}
+
+.design__title {
+	font-size: 2.8rem;
+	font-weight: 900;
+	color: hsl(169, 43%, 23%);
+}
+
+.design__para {
+	font-size: 1.8rem;
+	color: hsl(167, 40%, 24%);
+	line-height: 1.5;
+	width: 95%;
+	margin: 2em auto 0;
+	font-weight: 600;
+}
+
+.design__para--blue,
+.design__title--blue {
+	color: hsl(198, 62%, 26%);
 }
 
 .attribution {
