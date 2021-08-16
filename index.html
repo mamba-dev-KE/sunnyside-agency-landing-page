@@ -84,7 +84,7 @@
 
     <!-- GRAPHIC DESIGN SECTION -->
     <section class="design">
-      <div class="container row">
+      <div class="container design__row">
         <div class="design__component">
           <div class="design__image">
             <picture>
@@ -119,16 +119,80 @@
       </div>
     </section>
 
+    <!-- CLIENT TESTIMONIALS SECTION -->
     <section class="testimonials">
-      <div class="container row">
-        <h2 class="testimonials_title">Client Testimonials</h2>
+      <div class="container testimonials__row">
+        <h2 class="testimonials__title">Client Testimonials</h2>
         <div class="testimonials__card">
-
+          <img class="testimonials__image" src="./images/image-emily.jpg" alt="Emily">
+          <p class="testimonials__para">We put our trust in Sunnyside and they delivered, making sure our needs were met
+            and deadlines were always hit.</p>
+          <h3 class="testimonials__name">Emily R.</h3>
+          <P class="testimonials__position">Marketing Director</P>
+        </div>
+        <div class="testimonials__card">
+          <img class="testimonials__image" src="./images/image-thomas.jpg" alt="Thomas">
+          <p class="testimonials__para">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success
+            made it a satisfying and enjoyable experience.</p>
+          <h3 class="testimonials__name">Thomas S.</h3>
+          <P class="testimonials__position">Chief Operating Officer</P>
+        </div>
+        <div class="testimonials__card">
+          <img class="testimonials__image" src="./images/image-jennie.jpg" alt="Jennie">
+          <p class="testimonials__para">Incredible end result! Our sales increased over 400% when we worked with
+            Sunnyside. Highly recommended!</p>
+          <h3 class="testimonials__name">Jennie F.</h3>
+          <P class="testimonials__position">Business Owner</P>
         </div>
       </div>
     </section>
 
+    <section class="gallery">
+      <div class="container gallery__row">
+        <picture>
+          <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-milkbottles.jpg">
+          <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-milkbottles.jpg">
+          <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="milk bottles">
+        </picture>
+        <picture>
+          <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-orange.jpg">
+          <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-orange.jpg">
+          <img src="./images/desktop/image-gallery-orange.jpg" alt="orange">
+        </picture>
+      </div>
+      <div class="container gallery__row">
+        <picture>
+          <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-cone.jpg">
+          <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-cone.jpg">
+          <img src="./images/desktop/image-gallery-cone.jpg" alt="cone">
+        </picture>
+        <picture>
+          <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-sugars-cubes.jpg">
+          <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-sugars-cubes.jpg">
+          <img src="./images/desktop/image-gallery-sugars-cubes.jpg" alt="sugarcubes">
+        </picture>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <h2 class="footer__title">sunnyside</h2>
+    <div class="container footer__row">
+      <nav class="footer__nav">
+        <ul class="footer__navlist">
+          <li class="footer__navitems">About</li>
+          <li class="footer__navitems">Services</li>
+          <li class="footer__navitems">Projects</li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <img src="./images/icon-facebook.svg" alt="Facebook">
+        <img src="./images/icon-instagram.svg" alt="Instagram">
+        <img src="./images/icon-twitter.svg" alt="Twitter">
+        <img src="./images/icon-pinterest.svg" alt="Pinterest">
+      </div>
+    </div>
+  </footer>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
