@@ -24,6 +24,10 @@ a:visited {
 	color: hsl(210, 31%, 20%);
 	text-decoration: none;
 }
+
+ul:hover {
+	cursor: pointer;
+}
 /* SHARED STYLES */
 .hero__title,
 .brands__title,
@@ -68,25 +72,40 @@ a:visited {
 }
 
 /* HERO SECTION STYLES */
-.hero {
+.wrapper {
+	position: relative;
+}
+
+/* .hero {
 	position: absolute;
-	top: 20%;
 	text-transform: uppercase;
 	color: hsl(0, 0%, 100%);
 	font-size: 1.8rem;
 	line-height: 1.5;
+	top: 16%;
+} */
+
+.hero {
+	position: absolute;
+	text-transform: uppercase;
+	color: hsl(0, 0%, 100%);
+	font-size: 1.8rem;
+	line-height: 1.5;
+	top: 34%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .hero__title {
-	width: 70%;
-	margin: 1em auto;
+	width: 100%;
+	margin: 0 auto;
 	font-weight: 900;
 	letter-spacing: 0.2em;
 }
 
 .hero__arrow {
 	width: 3.5rem;
-	margin: 3em auto;
+	margin: 3em auto 0;
 }
 
 /* BRANDS SECTION STYLES */
@@ -105,7 +124,7 @@ a:visited {
 	font-weight: 900;
 	color: hsl(210, 31%, 20%);
 	padding-top: 5rem;
-	width: 80%;
+	width: 85%;
 	margin: 0 auto;
 }
 
@@ -114,7 +133,8 @@ a:visited {
 	line-height: 1.5;
 	font-weight: 600;
 	margin: 2em auto;
-	width: 83%;
+	width: 76%;
+	max-width: 370px;
 }
 
 .brands__btn {
@@ -138,10 +158,6 @@ a:visited {
 	box-shadow: 0px 12px 9px 0px hsl(7, 99%, 70%);
 }
 
-.row {
-	display: flex;
-	flex-direction: column-reverse;
-}
 /*GRAPHIC DESIGN SECTION*/
 .design__component {
 	position: relative;
@@ -149,37 +165,41 @@ a:visited {
 
 .design__info {
 	position: absolute;
-	top: 65%;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .design__title {
-	font-size: 2.8rem;
+	font-size: 2.5rem;
 	font-weight: 900;
 	color: hsl(169, 43%, 23%);
 }
 
 .design__para {
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	color: hsl(167, 40%, 24%);
 	line-height: 1.5;
-	width: 95%;
-	margin: 1.8em auto 0;
+	width: 35rem;
+	margin-top: 1.2em;
 	font-weight: 600;
+	/* max-width: 40rem; */
+	
 }
 
 .design__para--blue,
 .design__title--blue {
 	color: hsl(198, 62%, 26%);
 }
-
+/*TESTIMONIALS SECTION STYLES*/
 .testimonials {
-	padding-bottom: 6em;
+	padding-bottom: 6.5em;
 }
 
 .testimonials__title {
 	padding-top: 3em;
 	color: hsl(220, 2%, 64%);
-	font-size: 1.8em;
+	font-size: 1.5em;
 	text-transform: uppercase;
 	letter-spacing: 0.3rem;
 }
@@ -196,11 +216,11 @@ a:visited {
 }
 
 .testimonials__para {
-	width: 87%;
+	width: 75%;
 	color: hsl(213, 9%, 39%);
 	font-weight: 600;
 	line-height: 1.6;
-	font-size: 1.8em;
+	font-size: 1.5em;
 	margin-top: 2em;
 }
 
@@ -257,6 +277,10 @@ a:visited {
 	margin: 9.5em auto 0;
 }
 
+.footer__social:hover {
+	cursor: pointer;
+}
+
 /*ATTRIBUTION SECTION STYLES*/
 
 .attribution {
@@ -266,11 +290,40 @@ a:visited {
 }
 
 .attribution a {
-	color: hsl(227, 15%, 58%);
+	color: #595959;
 }
 
 .attribution__designer,
 .attribution__programmer {
 	font-size: 1.2rem;
 	margin-top: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+	.container {
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+	.brands__transform__row,
+	.brands__standout__row,
+	.design__row,
+	.testimonials__row {
+		display: flex;
+	}
+	.brands__transform__row {
+		flex-direction: row-reverse;
+	}
+
+	.gallery__column {
+		/* width: 50%; */
+	}
+
+	.brands__image,
+	.brands__info {
+		flex-basis: 50%;
+	}
+
+	.design__component {
+		flex-basis: 50%;
+	}
 }

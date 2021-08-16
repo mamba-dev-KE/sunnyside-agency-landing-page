@@ -16,44 +16,42 @@
 
 <body>
   <header class="header">
-    <img class="header__logo" src="./images/logo.svg" alt="sunnyside">
+    <div class="container">
+      <img class="header__logo" src="./images/logo.svg" alt="sunnyside">
 
-    <!-- <div class="header__menu">
+      <!-- <div class="header__menu">
         <img src="./images/icon-hamburger.svg" alt="">
       </div> -->
-    <nav class="header__nav">
-      <ul class="header__nav__list">
-        <li class="header__nav__items"><a href="">About</a></li>
-        <li class="header__nav__items"><a href="">Services</a></li>
-        <li cclass="header__nav__items"><a href="">Projects</a></li>
-        <li class="header__nav__items"><a href="">Contact</a></li>
-      </ul>
-    </nav>
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li class="header__nav__items"><a href="">About</a></li>
+          <li class="header__nav__items"><a href="">Services</a></li>
+          <li cclass="header__nav__items"><a href="">Projects</a></li>
+          <li class="header__nav__items"><a href="">Contact</a></li>
+        </ul>
+      </nav>
 
-    <picture>
-      <source media="(max-width: 757px)" srcset="./images/mobile/image-header.jpg">
-      <source media="(min-width: 756px)" srcset="./images/desktop/image-header.jpg">
-      <img src="./images/desktop/image-header.jpg" alt="">
-    </picture>
+      <picture>
+        <source media="(max-width: 757px)" srcset="./images/mobile/image-header.jpg">
+        <source media="(min-width: 756px)" srcset="./images/desktop/image-header.jpg">
+        <img src="./images/desktop/image-header.jpg" alt="">
+      </picture>
+    </div>
   </header>
+
   <main class="content">
 
     <!-- HERO SECTION -->
     <section class="hero">
-      <h1 class="hero__title">We are creatives</h1>
-      <img class="hero__arrow" src="./images/icon-arrow-down.svg" alt="">
+      <div class="wrapper">
+        <h1 class="hero__title">We are creatives</h1>
+        <img class="hero__arrow" src="./images/icon-arrow-down.svg" alt="">
+      </div>
     </section>
 
     <!-- BRANDS SECTION -->
     <section class="brands">
-      <div class="container row">
-        <div class="brands__info column">
-          <h2 class="brands__title">Transform your brand</h2>
-          <p class="brands__para">We are a full-service creative agency specializing in helping brands grow fast. Engage
-            your
-            clients through compelling visuals that do most of the marketing for you.</p>
-          <button class="brands__btn"><a class="brands__link brands__link--yellow" href="#">Learn More</a></button>
-        </div>
+      <div class="container brands__transform__row">
         <div class="brands__image column">
           <picture>
             <source media="(max-width: 757px)" srcset="./images/mobile/image-transform.jpg">
@@ -61,23 +59,30 @@
             <img src="./images/desktop/image-transform.jpg" alt="">
           </picture>
         </div>
+        <div class="brands__info column">
+          <h2 class="brands__title">Transform your brand</h2>
+          <p class="brands__para">We are a full-service creative agency specializing in helping brands grow fast. Engage
+            your
+            clients through compelling visuals that do most of the marketing for you.</p>
+          <button class="brands__btn"><a class="brands__link brands__link--yellow" href="#">Learn More</a></button>
+        </div>
       </div>
 
-      <div class="container row">
-        <div class="brands__info column">
+      <div class="container brands__standout__row">
+        <div class="brands__image">
+          <picture>
+            <source media="(max-width: 757px)" srcset="./images/mobile/image-stand-out.jpg">
+            <source media="(min-width: 756px )" srcset="./images/desktop/image-stand-out.jpg">
+            <img src="./images/desktop/image-stand-out.jpg" alt="">
+          </picture>
+        </div>
+        <div class="brands__info">
           <h2 class="brands__title">Standout to the right audience</h2>
           <p class="brands__para">Using a collaborative formula of designers, researchers, photographers, videographers,
             and
             copywriters, we’ll build and extend your brand in digital places.</p>
           <button class="brands__btn"><a class="brands__link brands__link--redish" href="#">Learn
               More</a></button>
-        </div>
-        <div class="brands__image column">
-          <picture>
-            <source media="(max-width: 757px)" srcset="./images/mobile/image-stand-out.jpg">
-            <source media="(min-width: 756px )" srcset="./images/desktop/image-stand-out.jpg">
-            <img src="./images/desktop/image-stand-out.jpg" alt="">
-          </picture>
         </div>
       </div>
     </section>
@@ -100,21 +105,21 @@
               potential clients’ attention.</p>
           </div>
         </div>
-      </div>
 
-      <div class="design__component">
-        <div class="design__image">
-          <picture>
-            <source media="(max-width: 757px)" srcset="./images/mobile/image-photography.jpg">
-            <source media="(min-width: 756px )" srcset="./images/desktop/image-photography.jpg">
-            <img src="./images/desktop/image-photography.jpg" alt="">
-          </picture>
-        </div>
-        <div class="design__info">
-          <h2 class="design__title design__title--blue">Photography</h2>
-          <p class="design__para design__para--blue">Increase your credibility by getting the most stunning,
-            high-quality photos that
-            improve your business image.</p>
+        <div class="design__component">
+          <div class="design__image">
+            <picture>
+              <source media="(max-width: 757px)" srcset="./images/mobile/image-photography.jpg">
+              <source media="(min-width: 756px )" srcset="./images/desktop/image-photography.jpg">
+              <img src="./images/desktop/image-photography.jpg" alt="">
+            </picture>
+          </div>
+          <div class="design__info">
+            <h2 class="design__title design__title--blue">Photography</h2>
+            <p class="design__para design__para--blue">Increase your credibility by getting the most stunning,
+              high-quality photos that
+              improve your business image.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -147,35 +152,44 @@
       </div>
     </section>
 
+    <!-- GALLERY SECTION -->
     <section class="gallery">
       <div class="container gallery__row">
-        <picture>
-          <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-milkbottles.jpg">
-          <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-milkbottles.jpg">
-          <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="milk bottles">
-        </picture>
-        <picture>
-          <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-orange.jpg">
-          <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-orange.jpg">
-          <img src="./images/desktop/image-gallery-orange.jpg" alt="orange">
-        </picture>
-      </div>
-      <div class="container gallery__row">
-        <picture>
-          <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-cone.jpg">
-          <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-cone.jpg">
-          <img src="./images/desktop/image-gallery-cone.jpg" alt="cone">
-        </picture>
-        <picture>
-          <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-sugars-cubes.jpg">
-          <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-sugars-cubes.jpg">
-          <img src="./images/desktop/image-gallery-sugars-cubes.jpg" alt="sugarcubes">
-        </picture>
+        <div class="gallery__column">
+          <picture>
+            <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-milkbottles.jpg">
+            <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-milkbottles.jpg">
+            <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="milk bottles">
+          </picture>
+        </div>
+        <div class="gallery__column">
+          <picture>
+            <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-orange.jpg">
+            <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-orange.jpg">
+            <img src="./images/desktop/image-gallery-orange.jpg" alt="orange">
+          </picture>
+        </div>
+        <div class="gallery__column">
+          <picture>
+            <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-cone.jpg">
+            <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-cone.jpg">
+            <img src="./images/desktop/image-gallery-cone.jpg" alt="cone">
+          </picture>
+        </div>
+        <div class="gallery__column">
+          <picture>
+            <source media="(max-width: 757px)" srcset="./images/mobile/image-gallery-sugars-cubes.jpg">
+            <source media="(min-width: 756px )" srcset="./images/desktop/image-gallery-sugars-cubes.jpg">
+            <img src="./images/desktop/image-gallery-sugars-cubes.jpg" alt="sugarcubes">
+          </picture>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <!-- FOOTER SECTION -->
+  <footer class="footer container">
+    <!-- <div class="container"> -->
     <h2 class="footer__title">sunnyside</h2>
     <div class="container footer__row">
       <nav class="footer__nav">
@@ -192,6 +206,7 @@
         <img src="./images/icon-pinterest.svg" alt="Pinterest">
       </div>
     </div>
+    <!-- </div> -->
   </footer>
 
   <div class="attribution">
