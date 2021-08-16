@@ -72,33 +72,25 @@ ul:hover {
 }
 
 /* HERO SECTION STYLES */
-.wrapper {
-	position: relative;
-}
-
-/* .hero {
-	position: absolute;
-	text-transform: uppercase;
-	color: hsl(0, 0%, 100%);
-	font-size: 1.8rem;
-	line-height: 1.5;
-	top: 16%;
-} */
 
 .hero {
+	/* position: relative; */
+}
+
+.hero__wrapper {
 	position: absolute;
 	text-transform: uppercase;
 	color: hsl(0, 0%, 100%);
 	font-size: 1.8rem;
 	line-height: 1.5;
-	top: 34%;
 	left: 50%;
+	bottom: 32%;
 	transform: translate(-50%, -50%);
 }
 
 .hero__title {
 	width: 100%;
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	font-weight: 900;
 	letter-spacing: 0.2em;
 }
@@ -183,8 +175,7 @@ ul:hover {
 	width: 35rem;
 	margin-top: 1.2em;
 	font-weight: 600;
-	/* max-width: 40rem; */
-	
+	padding: 0 2em;
 }
 
 .design__para--blue,
@@ -222,6 +213,7 @@ ul:hover {
 	line-height: 1.6;
 	font-size: 1.5em;
 	margin-top: 2em;
+	max-width: 30rem;
 }
 
 .testimonials__name {
@@ -299,7 +291,7 @@ ul:hover {
 	margin-top: 1em;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
 	.container {
 		max-width: 1400px;
 		margin: 0 auto;
@@ -314,8 +306,16 @@ ul:hover {
 		flex-direction: row-reverse;
 	}
 
-	.gallery__column {
-		/* width: 50%; */
+	.testimonials__row {
+		justify-content: center;
+	}
+
+	.testimonials__para {
+		width: 100%;
+	}
+
+	.testimonials__card + .testimonials__card {
+		margin-left: 3em;
 	}
 
 	.brands__image,
