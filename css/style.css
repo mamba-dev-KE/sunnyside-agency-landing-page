@@ -15,13 +15,14 @@ img {
 	display: block;
 }
 
-nav {
+.header__nav {
 	display: none;
 }
 
 a:link,
 a:visited {
 	color: hsl(210, 31%, 20%);
+	text-decoration: none;
 }
 /* SHARED STYLES */
 .hero__title,
@@ -36,7 +37,11 @@ a:visited {
 .brands__para,
 .design__para,
 .testimonials__para,
-.testimonials__position {
+.testimonials__position,
+.footer__title,
+.footer__navitems,
+.attribution__designer,
+.attribution__programmer {
 	font-family: "Barlow", sans-serif;
 	font-size: 1.8rem;
 }
@@ -47,7 +52,8 @@ a:visited {
 .testimonials__title,
 .testimonials__para,
 .testimonials__name,
-.testimonials__position {
+.testimonials__position,
+.footer__title {
 	text-align: center;
 }
 /* HEADER SECTION STYLES */
@@ -217,13 +223,54 @@ a:visited {
 	display: flex;
 }
 
+/*FOOTER SECTION STYLES*/
+.footer {
+	background-color: hsl(167, 44%, 70%);
+	padding: 5em 0 8.5em;
+}
 
+.footer__title {
+	font-size: 3.5rem;
+	font-weight: 600;
+	color: hsl(166, 43%, 33%);
+}
+
+.footer__navlist {
+	display: flex;
+	font-size: 1.8rem;
+	list-style: none;
+	width: 25rem;
+	justify-content: space-between;
+	margin-top: 2em;
+	margin: 2em auto 0;
+}
+
+.footer__navitems {
+	color: hsl(166, 34%, 41%);
+	font-weight: 600;
+}
+
+.footer__social {
+	display: flex;
+	justify-content: space-between;
+	width: 15rem;
+	margin: 9.5em auto 0;
+}
+
+/*ATTRIBUTION SECTION STYLES*/
 
 .attribution {
-	font-size: 11px;
+	font-size: 1.1rem;
 	text-align: center;
+	margin-bottom: 1em;
 }
 
 .attribution a {
-	color: hsl(228, 45%, 44%);
+	color: hsl(227, 15%, 58%);
+}
+
+.attribution__designer,
+.attribution__programmer {
+	font-size: 1.2rem;
+	margin-top: 1em;
 }
