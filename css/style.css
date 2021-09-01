@@ -72,7 +72,6 @@ ul:hover {
 }
 
 /* HERO SECTION STYLES */
-
 .hero__wrapper {
 	position: absolute;
 	text-transform: uppercase;
@@ -86,7 +85,6 @@ ul:hover {
 
 .hero__title {
 	width: 100%;
-	/* margin: 0 auto; */
 	font-weight: 900;
 	letter-spacing: 0.2em;
 }
@@ -94,6 +92,7 @@ ul:hover {
 .hero__arrow {
 	width: 3.5rem;
 	margin: 3em auto 0;
+	animation: moveArrow 3s infinite;
 }
 
 /* BRANDS SECTION STYLES */
@@ -289,6 +288,12 @@ ul:hover {
 .attribution__programmer {
 	font-size: 1.2rem;
 	margin-top: 1em;
+}
+
+@keyframes moveArrow {
+	50% {
+		transform: translateY(-15px) scale(1.05);
+	}
 }
 
 @media only screen and (min-width: 700px) {
