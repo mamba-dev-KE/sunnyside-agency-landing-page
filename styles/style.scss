@@ -433,6 +433,10 @@ h6 {
     --gap: 5.5em;
 
     padding-block: 6em;
+
+    @media (min-width: 700px) {
+      flex-direction: row;
+    }
   }
 
   &__card {

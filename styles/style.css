@@ -384,6 +384,11 @@ h6 {
   --gap: 5.5em;
   padding-block: 6em;
 }
+@media (min-width: 700px) {
+  .testimonials__row {
+    flex-direction: row;
+  }
+}
 .testimonials__card {
   --gap: 4em;
   padding-top: 2em;
