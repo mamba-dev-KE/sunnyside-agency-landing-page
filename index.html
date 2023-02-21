@@ -22,37 +22,36 @@
 
   <body>
     <header class="header">
-      <div class="header__container flex justify-between items-center">
+      <div class="header__wrapper container flex justify-between items-center">
         <img class="header__logo" src="./images/logo.svg" alt="sunnyside" />
         <nav class="header__nav flex items-center">
           <ul class="flex flex-grow items-center">
             <li>About</li>
             <li>Services</li>
             <li>Projects</li>
-            <button>Contact</button>
+            <button class="cursor-pointer">Contact</button>
           </ul>
         </nav>
         <div class="header__menu flex">
           <img src="./images/icon-hamburger.svg" alt="" />
         </div>
       </div>
+      <picture class="hero__image container">
+        <source
+          media="(max-width: 757px)"
+          srcset="./images/mobile/image-header.jpg"
+        />
+        <source
+          media="(min-width: 756px)"
+          srcset="./images/desktop/image-header.jpg"
+        />
+        <img src="./images/desktop/image-header.jpg" alt="" />
+      </picture>
     </header>
 
-    <main class="content">
+    <main class="content container">
       <!-- HERO SECTION -->
       <section class="hero">
-        <picture class="hero__image">
-          <source
-            media="(max-width: 757px)"
-            srcset="./images/mobile/image-header.jpg"
-          />
-          <source
-            media="(min-width: 756px)"
-            srcset="./images/desktop/image-header.jpg"
-          />
-          <img src="./images/desktop/image-header.jpg" alt="" />
-        </picture>
-
         <div class="hero__wrapper">
           <h1 class="hero__title">We are creatives</h1>
           <div class="flex justify-center">
@@ -67,7 +66,7 @@
 
       <!-- BRANDS SECTION -->
       <section class="brands">
-        <div class="brands__transform__row">
+        <div class="brands__transform flex flex-col">
           <div class="brands__image">
             <picture>
               <source
@@ -81,7 +80,7 @@
               <img src="./images/desktop/image-transform.jpg" alt="" />
             </picture>
           </div>
-          <div class="brands__info">
+          <div class="brands__info flex flex-col">
             <div class="brands__wrapper flex flex-col">
               <h2 class="brands__title text-center">Transform your brand</h2>
               <p class="brands__para text-center">
@@ -89,14 +88,16 @@
                 brands grow fast. Engage your clients through compelling visuals
                 that do most of the marketing for you.
               </p>
-              <a class="brands__link brands__link--yellow" href="#"
-                >Learn More</a
+              <a
+                class="brands__link brands__link--yellow center flex justify-center"
+                href="#"
+                ><span>Learn More</span></a
               >
             </div>
           </div>
         </div>
 
-        <div class="brands__standout__row">
+        <div class="brands__standout flex flex-col">
           <div class="brands__image">
             <picture>
               <source
@@ -120,62 +121,67 @@
                 photographers, videographers, and copywriters, we’ll build and
                 extend your brand in digital places.
               </p>
-              <a class="brands__link brands__link--redish" href="#"
-                >Learn More</a
+              <a
+                class="brands__link brands__link--redish center flex justify-center"
+                href="#"
+                ><span>Learn More</span></a
               >
             </div>
           </div>
         </div>
+        <!-- </div> -->
       </section>
 
       <!-- GRAPHIC DESIGN SECTION -->
       <section class="design">
-        <div class="design__component">
-          <div class="design__image">
-            <picture>
-              <source
-                media="(max-width: 757px)"
-                srcset="./images/mobile/image-graphic-design.jpg"
-              />
-              <source
-                media="(min-width: 756px )"
-                srcset="./images/desktop/image-graphic-design.jpg"
-              />
-              <img src="./images/desktop/image-graphic-design.jpg" alt="" />
-            </picture>
+        <div class="design__wrapper flex flex-col">
+          <div class="design__component">
+            <div class="design__image">
+              <picture>
+                <source
+                  media="(max-width: 757px)"
+                  srcset="./images/mobile/image-graphic-design.jpg"
+                />
+                <source
+                  media="(min-width: 756px )"
+                  srcset="./images/desktop/image-graphic-design.jpg"
+                />
+                <img src="./images/desktop/image-graphic-design.jpg" alt="" />
+              </picture>
+            </div>
+            <div class="design__info">
+              <h2 class="design__title text-center">Graphic Design</h2>
+              <p class="design__para text-center center">
+                Great design makes you memorable. We deliver artwork that
+                underscores your brand message and captures potential clients’
+                attention.
+              </p>
+            </div>
           </div>
-          <div class="design__info">
-            <h2 class="design__title text-center">Graphic Design</h2>
-            <p class="design__para text-center">
-              Great design makes you memorable. We deliver artwork that
-              underscores your brand message and captures potential clients’
-              attention.
-            </p>
-          </div>
-        </div>
 
-        <div class="design__component">
-          <div class="design__image">
-            <picture>
-              <source
-                media="(max-width: 757px)"
-                srcset="./images/mobile/image-photography.jpg"
-              />
-              <source
-                media="(min-width: 756px )"
-                srcset="./images/desktop/image-photography.jpg"
-              />
-              <img src="./images/desktop/image-photography.jpg" alt="" />
-            </picture>
-          </div>
-          <div class="design__info">
-            <h2 class="design__title text-center design__title--blue">
-              Photography
-            </h2>
-            <p class="design__para text-center design__para--blue">
-              Increase your credibility by getting the most stunning,
-              high-quality photos that improve your business image.
-            </p>
+          <div class="design__component">
+            <div class="design__image">
+              <picture>
+                <source
+                  media="(max-width: 757px)"
+                  srcset="./images/mobile/image-photography.jpg"
+                />
+                <source
+                  media="(min-width: 756px )"
+                  srcset="./images/desktop/image-photography.jpg"
+                />
+                <img src="./images/desktop/image-photography.jpg" alt="" />
+              </picture>
+            </div>
+            <div class="design__info">
+              <h2 class="design__title text-center design__title--blue">
+                Photography
+              </h2>
+              <p class="design__para text-center design__para--blue center">
+                Increase your credibility by getting the most stunning,
+                high-quality photos that improve your business image.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -186,11 +192,11 @@
         <div class="testimonials__row flex flex-col justify-center">
           <div class="testimonials__card flex flex-col justify-center">
             <img
-              class="testimonials__image"
+              class="testimonials__image center"
               src="./images/image-emily.jpg"
               alt="Emily"
             />
-            <p class="testimonials__para text-center">
+            <p class="testimonials__para text-center center">
               We put our trust in Sunnyside and they delivered, making sure our
               needs were met and deadlines were always hit.
             </p>
@@ -201,11 +207,11 @@
           </div>
           <div class="testimonials__card flex flex-col justify-center">
             <img
-              class="testimonials__image"
+              class="testimonials__image center"
               src="./images/image-thomas.jpg"
               alt="Thomas"
             />
-            <p class="testimonials__para text-center">
+            <p class="testimonials__para text-center center">
               Sunnyside’s enthusiasm coupled with their keen interest in our
               brand’s success made it a satisfying and enjoyable experience.
             </p>
@@ -216,11 +222,11 @@
           </div>
           <div class="testimonials__card flex flex-col justify-center">
             <img
-              class="testimonials__image"
+              class="testimonials center"
               src="./images/image-jennie.jpg"
               alt="Jennie"
             />
-            <p class="testimonials__para text-center">
+            <p class="testimonials__para text-center center">
               Incredible end result! Our sales increased over 400% when we
               worked with Sunnyside. Highly recommended!
             </p>

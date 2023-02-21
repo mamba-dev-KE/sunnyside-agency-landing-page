@@ -96,15 +96,26 @@ h6 {
 }
 
 .container {
-  width: min(100% - 2rem, 1440px);
+  width: min(100% - 2rem, 144rem);
   margin-inline: auto;
 }
 
+.center {
+  margin-inline: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* NAVBAR SECTION */
-.header {
-  position: relative;
+.header__wrapper {
+  position: absolute;
+  top: 4%;
+  right: 0;
+  left: 0;
   z-index: 2;
-  padding: 3.5rem 2rem;
+  padding-inline: 3em;
 }
 .header__logo {
   width: 15rem;
@@ -170,6 +181,13 @@ h6 {
   font-family: var(--font-secondary);
   text-transform: uppercase;
   background: hsl(var(--clr-yellow));
+  transition: all 50ms ease-in-out;
+}
+.header button:hover {
+  background: hsl(var(--clr-white)/0.4);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  color: hsl(var(--clr-white));
 }
 @media (min-width: 700px) {
   .header button {
@@ -186,24 +204,10 @@ h6 {
 }
 
 /* HERO SECTION */
-.hero {
-  height: 49vh;
-  border: 2px solid red;
-}
-@media (min-width: 800px) {
-  .hero {
-    min-height: 100vh;
-  }
-}
-.hero__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .hero__wrapper {
   position: absolute;
+  top: 10%;
   left: 50%;
-  width: 100%;
   margin-top: 2.4em;
   font-family: var(--font-secondary);
   text-transform: uppercase;
@@ -212,19 +216,63 @@ h6 {
   line-height: 1.5;
   transform: translateX(-50%);
 }
+@media (min-width: 700px) {
+  .hero__wrapper {
+    margin-top: 7em;
+  }
+}
 .hero__title {
-  text-align: center;
-  font-weight: 900;
   font-size: 3.5rem;
+  font-weight: 900;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .hero__title {
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+  }
 }
 .hero__arrow {
   margin-top: 3em;
   animation: moveArrow 3s infinite;
 }
+@media (min-width: 700px) {
+  .hero__arrow {
+    width: 2.5rem;
+    margin-top: 5.5em;
+  }
+}
 
 /* BRANDS SECTION */
 .brands {
   background-color: hsl(26deg, 100%, 99%);
+}
+.brands__container {
+  max-width: 144rem;
+}
+.brands__transform, .brands__standout {
+  --gap: 0;
+}
+@media (min-width: 700px) {
+  .brands__transform, .brands__standout {
+    text-align: left;
+    align-items: center;
+  }
+}
+@media (min-width: 800px) {
+  .brands__transform {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 700px) {
+  .brands__standout {
+    flex-direction: row;
+  }
+}
+@media (min-width: 700px) {
+  .brands__image, .brands__info {
+    width: 50%;
+  }
 }
 .brands__info {
   padding-block: 7em;
@@ -233,12 +281,27 @@ h6 {
 .brands__wrapper {
   --gap: 3rem;
 }
+@media (min-width: 700px) {
+  .brands__wrapper {
+    padding-inline: 10rem;
+  }
+}
+@media (min-width: 700px) {
+  .brands__title, .brands__para {
+    text-align: left;
+  }
+}
 .brands__title {
   font-family: var(--font-secondary);
   font-size: 3.5rem;
   font-weight: 900;
   color: hsl(var(--clr-dark-desaturated-blue));
   line-height: 1;
+}
+@media (min-width: 700px) {
+  .brands__title {
+    width: 80%;
+  }
 }
 .brands__para {
   line-height: 1.5;
@@ -247,15 +310,26 @@ h6 {
   max-width: 370px;
   color: hsl(var(--clr-dark-grayish-blue));
 }
+@media (min-width: 700px) {
+  .brands__para {
+    max-width: 450px;
+    margin-inline: unset;
+  }
+}
 .brands__link {
   font-size: 1.6rem;
   font-family: var(--font-secondary);
   font-weight: 900;
   text-transform: uppercase;
   text-decoration: none;
-  margin-inline: auto;
   color: hsl(var(--clr-dark-desaturated-blue));
   background-color: transparent;
+}
+@media (min-width: 700px) {
+  .brands__link {
+    margin-inline: unset;
+    width: 14rem;
+  }
 }
 .brands__link--yellow {
   box-shadow: 0px 10px 9px -5px hsl(var(--clr-yellow));
@@ -264,7 +338,15 @@ h6 {
   box-shadow: 0px 10px 9px -5px hsl(var(--clr-soft-red));
 }
 
-/* GRAPHIC DESIGN SECTION */
+/* DESIGN SECTION */
+.design__wrapper {
+  --gap: 0;
+}
+@media (min-width: 700px) {
+  .design__wrapper {
+    flex-direction: row;
+  }
+}
 .design__component {
   position: relative;
 }
@@ -288,6 +370,7 @@ h6 {
   color: hsl(var(--clr-dark-desaturated-cyan));
   line-height: 1.5;
   margin-top: 1.2em;
+  max-width: 40ch;
 }
 .design__para--blue, .design__title--blue {
   color: hsl(var(--clr-dark-blue));
@@ -315,14 +398,12 @@ h6 {
 .testimonials__image {
   border-radius: 50%;
   width: 20%;
-  margin-inline: auto;
 }
 .testimonials__para {
   font-weight: 600;
   font-size: 1.7em;
   color: hsl(var(--clr-very-dark-grayish-blue));
   line-height: 1.6;
-  margin-inline: auto;
   max-width: 31rem;
 }
 .testimonials__info {

@@ -101,16 +101,30 @@ h6 {
 }
 
 .container {
-  width: min(100% - 2rem, 1440px);
+  width: min(100% - 2rem, 144rem);
   margin-inline: auto;
+}
+
+.center {
+  margin-inline: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 /* NAVBAR SECTION */
 
 .header {
-  position: relative;
-  z-index: 2;
-  padding: 3.5rem 2rem;
+  &__wrapper {
+    position: absolute;
+    top: 4%;
+    right: 0;
+    left: 0;
+    z-index: 2;
+
+    padding-inline: 3em;
+  }
 
   &__logo {
     width: 15rem;
@@ -182,6 +196,13 @@ h6 {
     text-transform: uppercase;
 
     background: hsl(var(--clr-yellow));
+    transition: all 50ms ease-in-out;
+
+    &:hover {
+      background: hsl(var(--clr-white) / 0.4);
+      backdrop-filter: blur(5px);
+      color: hsl(var(--clr-white));
+    }
 
     @media (min-width: 700px) {
       background: hsl(var(--clr-white));
@@ -202,23 +223,11 @@ h6 {
 /* HERO SECTION */
 
 .hero {
-  height: 49vh;
-  border: 2px solid red;
-
-  @media (min-width: 800px) {
-    min-height: 100vh;
-  }
-
-  &__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
   &__wrapper {
     position: absolute;
+    top: 10%;
     left: 50%;
-    width: 100%;
+
     margin-top: 2.4em;
 
     font-family: var(--font-secondary);
@@ -228,18 +237,31 @@ h6 {
     color: hsl(var(--clr-white));
     line-height: 1.5;
     transform: translateX(-50%);
+
+    @media (min-width: 700px) {
+      margin-top: 7em;
+    }
   }
 
   &__title {
-    text-align: center;
-    font-weight: 900;
-
     font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+
+    @media (min-width: 700px) {
+      font-size: 4rem;
+      letter-spacing: 0.1em;
+    }
   }
 
   &__arrow {
     margin-top: 3em;
     animation: moveArrow 3s infinite;
+
+    @media (min-width: 700px) {
+      width: 2.5rem;
+      margin-top: 5.5em;
+    }
   }
 }
 
@@ -248,6 +270,39 @@ h6 {
 .brands {
   background-color: hsl(26, 100%, 99%);
 
+  &__container {
+    max-width: 144rem;
+  }
+
+  &__transform,
+  &__standout {
+    --gap: 0;
+
+    @media (min-width: 700px) {
+      text-align: left;
+      align-items: center;
+    }
+  }
+
+  &__transform {
+    @media (min-width: 800px) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__standout {
+    @media (min-width: 700px) {
+      flex-direction: row;
+    }
+  }
+
+  &__image,
+  &__info {
+    @media (min-width: 700px) {
+      width: 50%;
+    }
+  }
+
   &__info {
     padding-block: 7em;
     padding-inline: 2.5em;
@@ -255,6 +310,17 @@ h6 {
 
   &__wrapper {
     --gap: 3rem;
+
+    @media (min-width: 700px) {
+      padding-inline: 10rem;
+    }
+  }
+
+  &__title,
+  &__para {
+    @media (min-width: 700px) {
+      text-align: left;
+    }
   }
 
   &__title {
@@ -264,15 +330,24 @@ h6 {
 
     color: hsl(var(--clr-dark-desaturated-blue));
     line-height: 1;
+
+    @media (min-width: 700px) {
+      width: 80%;
+    }
   }
 
   &__para {
     line-height: 1.5;
     font-weight: 600;
     font-size: 1.8rem;
-    max-width: 370px;
 
+    max-width: 370px;
     color: hsl(var(--clr-dark-grayish-blue));
+
+    @media (min-width: 700px) {
+      max-width: 450px;
+      margin-inline: unset;
+    }
   }
 
   &__link {
@@ -283,9 +358,13 @@ h6 {
     text-transform: uppercase;
     text-decoration: none;
 
-    margin-inline: auto;
     color: hsl(var(--clr-dark-desaturated-blue));
     background-color: transparent;
+
+    @media (min-width: 700px) {
+      margin-inline: unset;
+      width: 14rem;
+    }
   }
 
   &__link--yellow {
@@ -297,9 +376,17 @@ h6 {
   }
 }
 
-/* GRAPHIC DESIGN SECTION */
+/* DESIGN SECTION */
 
 .design {
+  &__wrapper {
+    --gap: 0;
+
+    @media (min-width: 700px) {
+      flex-direction: row;
+    }
+  }
+
   &__component {
     position: relative;
   }
@@ -328,6 +415,7 @@ h6 {
     line-height: 1.5;
 
     margin-top: 1.2em;
+    max-width: 40ch;
   }
 
   &__para--blue,
@@ -365,7 +453,6 @@ h6 {
   &__image {
     border-radius: 50%;
     width: 20%;
-    margin-inline: auto;
   }
 
   &__para {
@@ -374,7 +461,6 @@ h6 {
     color: hsl(var(--clr-very-dark-grayish-blue));
 
     line-height: 1.6;
-    margin-inline: auto;
     max-width: 31rem;
   }
 
