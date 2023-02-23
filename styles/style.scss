@@ -465,7 +465,7 @@ h6 {
 
     padding-block: 6em;
 
-    @media (min-width: 950px) {
+    @media (min-width: 876px) {
       flex-direction: row;
     }
   }
@@ -474,6 +474,10 @@ h6 {
     --gap: 4em;
 
     padding-top: 2em;
+
+    @media (min-width: 876px) {
+      padding-inline: 1em;
+    }
   }
 
   &__title {
